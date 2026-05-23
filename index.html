@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simuladores Interactivos - Desafío Técnico</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Plataforma de Simuladores Matemáticos</h1>
+    </header>
+
+    <main class="container">
+        <!-- EJERCICIO 1: TRANSFERENCIA DE CALOR -->
+        <section class="card">
+            <h2>1. Ley de Enfriamiento</h2>
+            <p class="description">Calcula la temperatura final de un objeto en un entorno constante.</p>
+            <form id="form-calor">
+                <div class="form-group">
+                    <label for="t0">Temperatura Inicial (T₀) °C:</label>
+                    <input type="number" id="t0" value="120" step="any" required>
+                </div>
+                <div class="form-group">
+                    <label for="ts">Temperatura Entorno (T_s) °C:</label>
+                    <input type="number" id="ts" value="38" step="any" required>
+                </div>
+                <div class="form-group">
+                    <label for="k">Constante de Enfriamiento (k):</label>
+                    <input type="number" id="k" value="0.45" step="any" min="0" required>
+                </div>
+                <div class="form-group">
+                    <label for="t-tiempo">Tiempo (t) en horas:</label>
+                    <input type="number" id="t-tiempo" value="3" step="any" min="0" required>
+                </div>
+                <button type="button" id="btn-calor">Calcular Temperatura</button>
+            </form>
+            <div class="result-box" id="result-calor">El resultado aparecerá aquí.</div>
+        </section>
+
+        <!-- EJERCICIO 2: COMBINACIONES COMPLEJAS -->
+        <section class="card">
+            <h2>2. Calculador de Sorteos (Combinaciones)</h2>
+            <p class="description">Calcula las combinaciones independientes y el total de opciones.</p>
+            <form id="form-sorteo">
+                <h3>Grupo 1</h3>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="n1">Elementos (n₁):</label>
+                        <input type="number" id="n1" value="59" min="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="r1">Muestra (r₁):</label>
+                        <input type="number" id="r1" value="5" min="0" required>
+                    </div>
+                </div>
+
+                <h3>Grupo 2</h3>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="n2">Elementos (n₂):</label>
+                        <input type="number" id="n2" value="35" min="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="r2">Muestra (r₂):</label>
+                        <input type="number" id="r2" value="1" min="0" required>
+                    </div>
+                </div>
+                <button type="button" id="btn-sorteo">Calcular Combinaciones</button>
+            </form>
+            <div class="result-box" id="result-sorteo">El resultado aparecerá aquí.</div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
